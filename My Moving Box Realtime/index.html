@@ -1,0 +1,20 @@
+<html> 
+    <div id="my_box_realtime" style= "background-color:black; position: absolute; right: 70; bottom: 70; min-width: 100px; min-height: 100px"></div> 
+    <script type="text/javascript"> 
+     var my_box = document.getElementById("my_box_realtime"); 
+     var intervaLID = window.setInterval(myCallback, 35) 
+     var asd = 500; 
+     function myCallback() { 
+         if (asd == 0) { 
+             clearInterval(intervaLID) 
+        }  
+         else { 
+             asd--; 
+             my_box.style.bottom = asd+"px" 
+             my_box.style.right = asd+"px" 
+         }  
+     } 
+    </script> 
+</html>
+
+

@@ -1,0 +1,40 @@
+<html style='background-color: black'>
+  <div id="my_bouncing_box" 
+  style= 
+  "background-color: blue; 
+  border-radius: 3px; 
+  position: absolute; 
+  left: 0px; 
+  top: 0px; 
+  min-width: 100px; 
+  min-height: 100px; 
+  text-align: center; 
+  font-weight: 
+  bold; color: #999;" >Rakhmonov-Asadbek</div>
+
+  <script type="text/javascript">
+    var box = document.getElementById("my_bouncing_box");
+
+    var xposition = 1;
+    var yposition = 1;
+    var side = 100;
+    var width = window.innerWidth - side;
+    var height = window.innerHeight - side;
+
+
+    setInterval(function(){
+        box.style.left = parseInt(box.style.left, 10) + xposition; 
+        box.style.top = parseInt(box.style.top, 10) + yposition;
+        var x = parseInt(box.style.left, 10);
+        var y = parseInt(box.style.top, 10);
+
+        if (x === 0 || x === width) {
+            xposition *= -1;
+        }
+        if (y === 0 || y === height) {
+            yposition *= -1;
+        }
+    }, 5)
+  
+  </script>
+</html>
